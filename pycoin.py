@@ -8,4 +8,8 @@ result = StringIO.StringIO()
 c.setopt(pycurl.WRITEFUNCTION, result.write)
 c.perform()
 result = result.getvalue()
-print result
+b = '<b>Buy</b> 1 BTC at'
+print result[result.find(b):result.find(b) + len(b) + 46]
+	
+	
+	
