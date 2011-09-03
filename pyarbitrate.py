@@ -1,4 +1,5 @@
 #Bitcoin Arbitrage by Steven Richards <sbrichards@mit.edu>
+#Pulls data from www.nyse-group.de and reformats it
 import pycurl
 import StringIO
 print '\nPolling for data from www.nyse-group.de\n'
