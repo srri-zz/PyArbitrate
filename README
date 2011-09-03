@@ -1,6 +1,8 @@
+Dependencies: pycurl <http://pycurl.sourceforge.net/>
+
 A simple script for pulling Bitcoin Arbitration data from nyse-group.de
 and formatting it to tell you quickly the best trade options currently.
 Written by Steven Richards <sbrichards@mit.edu>
 Thanks to nyse-group.de!
 
-Note: ignore pycoin.py, use pyarbitrate.py 
+ 
