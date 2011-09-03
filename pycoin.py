@@ -27,7 +27,9 @@ else:
 		sellstring = sellstring.replace('<b>', '')
         	sellstring = sellstring.replace('</b>', '')
         	sellstring = sellstring.replace('<br>', '')
-	print 'Top Opportunities as of' + lcstring 	
+	for line in lcstring:
+		lcstring = lcstring.replace('Last call', '')
+	print 'Top Opportunities as of' + lcstring + '\n' 	
 	print buystring
 	print sellstring	
 	
