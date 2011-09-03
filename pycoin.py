@@ -9,7 +9,11 @@ c.setopt(pycurl.WRITEFUNCTION, result.write)
 c.perform()
 result = result.getvalue()
 b = '<b>Buy</b> 1 BTC at'
-print result[result.find(b):result.find(b) + len(b) + 46]
-	
+s = result[result.find(b):result.find(b) + len(b) + 46]
+for line in s:
+	s = s.replace('<b>', '')
+	s = s.replace('</b>', '')
+	s = s.replace('<br>', '')
+print s	
 	
 	
