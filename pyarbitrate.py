@@ -1,15 +1,9 @@
 #Bitcoin Arbitrage by Steven Richards <sbrichards@mit.edu>
 #Pulls data from www.nyse-group.de and reformats it
-import pycurl
-import StringIO
+import urllib
+
 print '\nPolling for data from www.nyse-group.de\n'
-c = pycurl.Curl()
-c.setopt(pycurl.URL, "http://www.nyse-group.de/_external_rm/index_btc.php")
-c.setopt(pycurl.HTTPHEADER, ["Accept:"])
-result = StringIO.StringIO()
-c.setopt(pycurl.WRITEFUNCTION, result.write)
-c.perform()
-result = result.getvalue()
+result = urllib.urlopen("http://www.nyse-group.de/_external_rm/index_btc.php").read()
 down = 'Data provider is currently not providing data. Please try again later.'
 if result == down:
 	print down + '\n'
