@@ -2,7 +2,6 @@
 #Pulls data from www.nyse-group.de and reformats it
 import urllib
 
-
 if __name__ == "__main__":
     print '\nPolling for data from www.nyse-group.de\n'
     result = urllib.urlopen("http://www.nyse-group.de/_external_rm/index_btc.php").read()
@@ -22,8 +21,8 @@ if __name__ == "__main__":
             buystring = buystring.replace('<br>', '')
         for line in sellstring:
             sellstring = sellstring.replace('<b>', '')
-                sellstring = sellstring.replace('</b>', '')
-                sellstring = sellstring.replace('<br>', '')
+            sellstring = sellstring.replace('</b>', '')
+            sellstring = sellstring.replace('<br>', '')
         for line in lcstring:
             lcstring = lcstring.replace('Last call', '')
         print 'Top Opportunities as of' + lcstring + '\n' 	
