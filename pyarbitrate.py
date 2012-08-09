@@ -25,7 +25,7 @@ if __name__ == "__main__":
             sellstring = sellstring.replace('<br>', '')
         for line in lcstring:
             lcstring = lcstring.replace('Last call', '')
-        print 'Top Opportunities as of' + lcstring + '\n' 	
+        print 'Top Opportunities as of' + lcstring + '\n'
         print buystring
-        print sellstring	
-	
+        print sellstring
+
